@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));// Debug mode
 
 app.get('/', function(req, res) {
-	res.send('HOME Api is at /api !');
+	res.send('Shoume Api is at /api !');
 });
 
 app.use('/api', routes);
