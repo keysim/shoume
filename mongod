@@ -1,0 +1,3 @@
+rm db/data/mongod.lock;
+mongod --repair;
+mongod --bind_ip=$IP --dbpath=db/data --nojournal;
