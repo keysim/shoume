@@ -1,8 +1,8 @@
 var config = {
-    secret: 'totolol974',
-    port : process.env.PORT || 3000,
-    url : "https://shoume-keysim.c9users.io:" + process.env.PORT || 3000,
-    db : {url:'mongodb://keysim-shoume-3816690:27017/shoume', port:27017, name:'shoume'}, // launch "mongod" then take port and host printed in the command line.
+    secret: 'shoumeuh',
+    port : 4243,
+    url : "http://92.222.72.189:" + 4243,
+    db : {url:'mongodb://92.222.72.189:27017/shoume', port:27017, name:'shoume'}, // launch "mongod" then take port and host printed in the command line.
     model:{
         user:{
             login: {type: String, required: true},
