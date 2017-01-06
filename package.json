@@ -1,20 +1,41 @@
 {
   "name": "Shoume",
-  "main": "server.js",
+  "version": "0.0.1",
+  "description": "API of shoume",
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.15.0",
     "connect-multiparty": "^2.0.0",
-    "easyimage": "^2.1.0",
+    "easyimage": "2.1.0",
     "express": "^4.13.4",
+    "imagemagick": "0.1.3",
     "jsonwebtoken": "^5.7.0",
     "mongodb": "^2.2.11",
     "mongoose": "^4.4.5",
     "morgan": "^1.7.0",
     "multer": "^1.2.0"
   },
+  "devDependencies": {},
   "scripts": {
-    "test" : "node app.js",
-    "start" : "node app.js > out 2> err & echo $! > pid",
-    "stop" : "kill $(cat pid)"
-  }
+    "stop": "kill $(cat pid)",
+    "start": "node app.js > out.txt 2> err.txt & echo $! > pid",
+    "restart": "npm stop; npm start",
+    "test": "node app.js",
+    "mongod": "mongod --dbpath=db/data --nojournal;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+http://github.com/keysim/shoume.git"
+  },
+  "keywords": [
+    "home",
+    "api",
+    "eip"
+  ],
+  "author": "Keysim",
+  "license": "ISC",
+  "bugs": {
+    "url": "http://github.com/keysim/shoume/issues"
+  },
+  "homepage": "http://github.com/keysim/shoume#readme"
 }
