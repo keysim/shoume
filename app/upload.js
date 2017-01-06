@@ -2,8 +2,8 @@ var config  = require('../config');
 var utils   = require('../utils');
 var jwt     = require('jsonwebtoken');
 var fs      = require('fs');
-var multer  = require('multer')
-var upload  = multer({ dest: './static/uploads/images' }).single('img')
+var multer  = require('multer');
+var upload  = multer({ dest: 'static/uploads/images' }).single('img');
 var easyimg = require('easyimage');
 
 module.exports = {
