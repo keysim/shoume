@@ -1,7 +1,7 @@
 var config = {
     secret: 'shoumeuh',
     port : 4243,
-    //url : "http://92.222.72.189:" + 4243,
+    url : "http://10.0.1.7:" + 4243,
     db : {url:'mongodb://127.0.0.1:27017/shoume', port:27017, name:'shoume'}, // launch "mongod" then take port and host printed in the command line.
     model:{
         user:{
