@@ -1,7 +1,6 @@
 var Moment   = require('./model').moment;
 var utils   = require('../utils');
 var config = require('../config');
-var mongooooo = require('mongoose');
 
 module.exports = {
     
@@ -14,7 +13,7 @@ module.exports = {
     
     getMomentById : function(req, res) {
     	Moment.findOne({
-    		_id: mongooooo.Types.ObjectId(req.params.id)
+    		_id: req.params.id
     	}, function(err, moment) {
     		if (err || !moment) {
     			res.status(404).json({success: false, message: 'Moment not found.'});
