@@ -32,6 +32,7 @@ var config = {
             selected_tags:Array
         },
         moment:{
+            _id: Number,
             owner_id:{type:String, required:true},
             image_url:String,
             title: {type:String, required:true},

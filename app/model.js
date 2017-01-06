@@ -5,9 +5,9 @@ var Schema = mongoose.Schema;
 
 var toJsonClean = { // remove __v and set _id to id ! =D
      transform: function (doc, ret, options) {
-         ret.id = ret._id;
-         delete ret._id;
-         delete ret.__v;
+         //ret.id = ret._id;
+         //delete ret._id;
+         //delete ret.__v;
      }
 };
 
