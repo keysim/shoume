@@ -11,5 +11,10 @@
     "mongoose": "^4.4.5",
     "morgan": "^1.7.0",
     "multer": "^1.2.0"
+  },
+  "scripts": {
+    "test" : "node app.js",
+    "start" : "node app.js > out 2> err & echo $! > pid",
+    "stop" : "kill $(cat pid)"
   }
 }
