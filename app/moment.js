@@ -13,7 +13,7 @@ module.exports = {
     },
     
     getMomentById : function(req, res) {
-    	//console.log(req.params.id);
+    	console.log(req.params.id);
     	Moment.findById(req.params.id, function(err, moment) {
     		console.log(moment);
     		if (err || !moment) {
