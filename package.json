@@ -17,7 +17,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "stop": "kill $(cat pid)",
+    "stop": "sudo kill $(cat pid)",
     "start": "sudo node app.js > out.txt 2> err.txt & echo $! > pid",
     "restart": "npm stop; npm start",
     "test": "node app.js",
