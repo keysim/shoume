@@ -9,6 +9,7 @@ var easyimg = require('easyimage');
 module.exports = {
     upload : function(req, res) { // UPLOAD THE IMAGES !!!
         upload(req, res, function (err) {
+            console.log(err);
             if (err || !req.file)
                 return res.json({success:false, message:"Upload error."});
         	var tmp_path = req.file.path;
