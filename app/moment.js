@@ -1,7 +1,7 @@
 var Moment   = require('./model').moment;
 var utils   = require('../utils');
 var config = require('../config');
-//var mongoose    = require('mongoose');
+var mongoose    = require('mongoose');
 
 module.exports = {
     
@@ -13,7 +13,12 @@ module.exports = {
     },
     
     getMomentById : function(req, res) {
+    	var id = req.params.id;
     	console.log(req.params.id);
+		if (id.match(/^[0-9a-fA-F]{24}$/)) {
+			console.log("nique ta mère");
+		}
+		console.log("is it true ? : ", mongoose.Types.ObjectId.isValid(req.params.id));
     	Moment.findOne({title:req.params.id}, function(err, moment) {
     		console.log(moment);
     		if (err || !moment) {
