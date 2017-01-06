@@ -13,7 +13,7 @@ module.exports = {
     
     getMomentById : function(req, res) {
     	Moment.findOne({
-    		_id: req.params.id
+    		_id: req.params.id.toString()
     	}, function(err, moment) {
     		if (err || !moment) {
     			res.status(404).json({success: false, message: 'Moment not found.'});
