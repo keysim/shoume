@@ -12,6 +12,8 @@ module.exports = {
     },
     
     getMomentById : function(req, res) {
+    	console.log(req.params.id);
+		console.log(req.params.id.toString());
     	Moment.findOne({
     		_id: req.params.id
     	}, function(err, moment) {
