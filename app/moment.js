@@ -14,7 +14,7 @@ module.exports = {
     getMomentById : function(req, res) {
     	console.log(req.params.id);
     	Moment.findOne({
-    		_id: req.params.id
+    		_id: ObjectId(req.params.id)
     	}, function(err, moment) {
     		if (err || !moment) {
     			res.status(404).json({success: false, message: 'Moment not found.'});
