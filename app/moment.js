@@ -14,7 +14,7 @@ module.exports = {
     getMomentById : function(req, res) {
     	//console.log(req.params.id);
     	Moment.findOne({
-    		_id: req.params.id//req.params.id
+    		_id: mongoose.Types.ObjectId(req.params.id)//req.params.id
     	}, function(err, moment) {
     		console.log(moment);
     		if (err || !moment) {
